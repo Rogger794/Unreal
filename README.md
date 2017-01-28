@@ -6,9 +6,9 @@
 
 3. Clone el motor gráfico, una vez sincronizada su cuenta.
 
-```
-git clone https://github.com/EpicGames/UnrealEngine
-```
+  ```
+  git clone https://github.com/EpicGames/UnrealEngine
+  ```
 
 4.  Instalamos paquetes necesarios:
 
