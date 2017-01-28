@@ -4,13 +4,13 @@
 
 2. Asociar su cuenta de Github a su cuenta de Unreal, editando tu cuenta dentro de [personal](https://www.unrealengine.com/dashboard) en [edit profile](https://www.unrealengine.com/dashboard/settings).
 
-3. Clone el motor gráfico, una vez sincronizada su cuenta.
+3. Clone el motor gráfico, una vez sincronizada su cuenta
 
   ```
   git clone https://github.com/EpicGames/UnrealEngine
   ```
 
-4.  Instalamos paquetes necesarios:
+4.  Instalamos paquetes necesarios
 
   ```
   sudo apt-get install build-essential mono-xbuild mono-dmcs libmono-corlib4.5-cil libmono-system-data-datasetextensions4.0-cil libmono-system-web-extensions4.0-cil libmono-system-management4.0-cil libmono-system-xml-linq4.0-cil cmake dos2unix clang-3.5 xdg-user-dirs git
@@ -23,7 +23,7 @@
   sudo ln -s /usr/bin/clang++-3.5 /usr/bin/clang++
   ```
 
-6. Ejecutamos los scripts sin usar sudo, ni estar como superusuario.
+6. Ejecutamos los scripts sin usar sudo, ni estar como superusuario
 
   ```
   cd UnrealEngine
@@ -39,8 +39,22 @@
   make ShaderCompileWorker UnrealLightmass UnrealPak CrashReportClient UE4Editor
   ```
 
-8. Ejecutar Unreal Engine 4
+8. Mover el contenido a /usr/share
 
   ```
-  cd Engine/Binaries/Linux && ./UE4Editor
+  cd ..
+  sudo mv UnrealEngine-release/ /usr/share/
+  ```
+
+9. Crear un enlace para el ejecutable
+
+  ```
+  sudo ln -sf /usr/share/UnrealEngine-release/Engine/Binaries/Linux/UE4Editor /usr/sbin/
+  ```
+
+10. Ejecutar el motor
+
+
+  ```
+  UE4Editor
   ```
